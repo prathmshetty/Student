@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management System</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>STUDENT MANAGEMENT SYSTEM</h2>
+    <div class="add-student-box">
+        <form id="studentForm">
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="age"><b>Age:</b></label>
+            <input type="number" id="age" name="age" required><br>
+            <label for="regno"><b>Registration Number:</b></label>
+            <input type="text" id="regno" name="regno" required><br>
+            <label for="course"><b>Course:</b></label>
+            <select id="course" name="course" required>
+                <option value="">Select Course</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Printing">Printing</option>
+                <option value="Electrical">Electrical</option>
+            </select><br>
+            <fieldset>
+                <legend>Gender:</legend>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="female">Female</label>
+            </fieldset><br><br>
+            <input type="submit" value="Add Student">
+        </form>
+    </div>
+    <hr>
+    <h3>RESULTS</h3>
+    <div class="result-box">
+        <label for="searchName"><b>Search by Name:</b></label>
+        <input type="text" id="searchName" name="searchName">
+        <input type="button" value="Search" onclick="searchStudent()">
+        <div class="not-found" id="notFoundMsg"><b>Name not found</b></div> <!-- Move not-found message inside result-box -->
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Registration Number</th>
+                    <th>Course</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Student data will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
